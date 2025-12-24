@@ -15,4 +15,4 @@ Allow: /
 Disallow: /admin/
 Disallow: /api/
 
-Sitemap: https://paribito.com/sitemap.xml
+Sitemap: https://athena.com/sitemap.xml

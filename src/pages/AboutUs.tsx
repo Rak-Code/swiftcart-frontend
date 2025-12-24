@@ -10,7 +10,7 @@ const AboutUs = () => {
         {/* Hero Section */}
         <div className="bg-primary text-primary-foreground py-12 sm:py-16 lg:py-20">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4 sm:mb-6">About PARIBITO</h1>
+            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4 sm:mb-6">About ATHENA</h1>
             <p className="text-base sm:text-lg lg:text-xl text-primary-foreground/80 max-w-2xl mx-auto leading-relaxed">
               Redefining men's fashion with timeless elegance and contemporary style
             </p>
@@ -24,7 +24,7 @@ const AboutUs = () => {
               <h2 className="text-2xl sm:text-3xl font-bold mb-4 sm:mb-6">Our Story</h2>
               <div className="space-y-4 text-sm sm:text-base text-muted-foreground leading-relaxed">
                 <p>
-                  Founded in 2020, PARIBITO emerged from a simple vision: to create premium men's 
+                  Founded in 2020, ATHENA emerged from a simple vision: to create premium men's 
                   fashion that seamlessly blends traditional craftsmanship with modern aesthetics. 
                   Our name, inspired by the concept of transformation, reflects our commitment to 
                   helping every man discover his unique style.
@@ -35,7 +35,7 @@ const AboutUs = () => {
                   our collection is thoughtfully designed to empower the modern gentleman.
                 </p>
                 <p>
-                  Today, PARIBITO serves thousands of customers worldwide, but our core values remain 
+                  Today, ATHENA serves thousands of customers worldwide, but our core values remain 
                   unchanged: quality, authenticity, and exceptional customer service.
                 </p>
               </div>
@@ -122,7 +122,7 @@ const AboutUs = () => {
               <h2 className="text-2xl sm:text-3xl font-bold mb-4 sm:mb-6">Craftsmanship & Quality</h2>
               <div className="space-y-4 text-sm sm:text-base text-muted-foreground leading-relaxed">
                 <p>
-                  Every PARIBITO garment is a testament to exceptional craftsmanship. We work with 
+                  Every ATHENA garment is a testament to exceptional craftsmanship. We work with 
                   experienced tailors and use premium fabrics sourced from renowned mills around the 
                   world.
                 </p>
@@ -181,7 +181,7 @@ const AboutUs = () => {
             <section className="text-center bg-primary text-primary-foreground p-8 sm:p-10 rounded-lg">
               <h2 className="text-2xl sm:text-3xl font-bold mb-3 sm:mb-4">Join Our Journey</h2>
               <p className="text-sm sm:text-base text-primary-foreground/80 mb-6 sm:mb-8 max-w-xl mx-auto leading-relaxed">
-                Experience the PARIBITO difference. Discover clothing that's crafted with care, 
+                Experience the ATHENA difference. Discover clothing that's crafted with care, 
                 designed with purpose, and made to last.
               </p>
               <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center">

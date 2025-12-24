@@ -26,7 +26,7 @@ All colors MUST be HSL.
     --muted: 0 0% 96%;
     --muted-foreground: 0 0% 35%;
 
-    --accent: 262 83% 58%;
+    --accent: 0 0% 21%;
     --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84.2% 60.2%;
@@ -34,7 +34,7 @@ All colors MUST be HSL.
 
     --border: 0 0% 91%;
     --input: 0 0% 91%;
-    --ring: 262 83% 58%;
+    --ring: 0 0% 21%;
 
     --radius: 0.25rem;
 
@@ -49,8 +49,8 @@ All colors MUST be HSL.
 
     /* Paribito Custom Colors */
     --dark-plum: 285 44% 5%;
-    --gold: 262 83% 58%;
-    --gold-light: 262 83% 70%;
+    --gold: 0 0% 21%;
+    --gold-light: 0 0% 35%;
     --neutral: 0 0% 96%;
     --text-muted: 0 0% 35%;
   }
@@ -65,8 +65,8 @@ All colors MUST be HSL.
     --popover: 285 30% 8%;
     --popover-foreground: 0 0% 98%;
 
-    --primary: 262 83% 58%;
-    --primary-foreground: 285 44% 5%;
+    --primary: 0 0% 21%;
+    --primary-foreground: 0 0% 100%;
 
     --secondary: 285 20% 15%;
     --secondary-foreground: 0 0% 98%;
@@ -74,7 +74,7 @@ All colors MUST be HSL.
     --muted: 285 20% 15%;
     --muted-foreground: 0 0% 65%;
 
-    --accent: 262 83% 58%;
+    --accent: 0 0% 21%;
     --accent-foreground: 0 0% 100%;
 
     --destructive: 0 62.8% 30.6%;
@@ -82,7 +82,7 @@ All colors MUST be HSL.
 
     --border: 285 20% 15%;
     --input: 285 20% 15%;
-    --ring: 262 83% 58%;
+    --ring: 0 0% 21%;
 
     --sidebar-background: 240 5.9% 10%;
     --sidebar-foreground: 240 4.8% 95.9%;
