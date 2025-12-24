@@ -124,7 +124,7 @@ const Navbar = () => {
         <div className="flex items-center justify-between h-14 sm:h-16">
           {/* Logo Section */}
           <Link to="/" className="flex items-center gap-2 hover:opacity-80 transition-opacity">
-            <span className="text-2xl font-bold text-foreground">Athena</span>
+            <span className="text-2xl font-bold" style={{ color: '#363636' }}>Athena</span>
           </Link>
 
           {/* Desktop Navigation */}

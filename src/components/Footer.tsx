@@ -38,7 +38,7 @@ const Footer = () => {
           {/* Brand */}
           <div className="col-span-2 sm:col-span-1 space-y-3">
             <div className="flex items-center gap-2">
-              <span className="text-2xl font-bold text-primary-foreground">Athena</span>
+              <span className="text-2xl font-bold" style={{ color: '#363636' }}>Athena</span>
             </div>
             <p className="text-xs text-primary-foreground/70 leading-relaxed">
               Premium men's fashion for the modern gentleman.
