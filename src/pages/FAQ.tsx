@@ -112,7 +112,7 @@ const FAQ = () => {
                 How do I contact customer service?
               </AccordionTrigger>
               <AccordionContent className="text-muted-foreground">
-                You can reach us via email at support@paribito.com or call us at 
+                You can reach us via email at support@athena.com or call us at 
                 +1 (555) 123-4567. Our customer service team is available Monday-Friday, 
                 9 AM - 6 PM EST.
               </AccordionContent>

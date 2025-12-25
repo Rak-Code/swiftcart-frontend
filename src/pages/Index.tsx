@@ -236,7 +236,7 @@ const Index = () => {
               Crafted for Excellence
             </h2>
             <p className="text-sm sm:text-base text-primary-foreground/75 leading-relaxed">
-              At PARIBITO, we believe that every man deserves to look and feel his best. 
+              At Athena, we believe that every man deserves to look and feel his best. 
               Our collection combines premium fabrics, impeccable tailoring, and contemporary 
               design to create pieces that stand the test of time.
             </p>

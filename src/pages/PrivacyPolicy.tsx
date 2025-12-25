@@ -19,7 +19,7 @@ const PrivacyPolicy = () => {
                 Last updated: December 7, 2025
               </p>
               <p className="text-sm sm:text-base leading-relaxed mt-4">
-                At PARIBITO, we take your privacy seriously. This Privacy Policy explains how we collect, 
+                At Athena, we take your privacy seriously. This Privacy Policy explains how we collect, 
                 use, disclose, and safeguard your information when you visit our website and make purchases.
               </p>
             </section>

@@ -41,7 +41,7 @@ const Footer = () => {
               <span className="text-2xl font-bold" style={{ color: '#363636' }}>Athena</span>
             </div>
             <p className="text-xs text-primary-foreground/70 leading-relaxed">
-              At PARIBITO, we believe that every man deserves to look and feel his best. Our collection combines premium fabrics, impeccable tailoring, and contemporary design to create pieces that stand the test of time.
+              At Athena, we believe that every man deserves to look and feel his best. Our collection combines premium fabrics, impeccable tailoring, and contemporary design to create pieces that stand the test of time.
             </p>
           </div>
 
