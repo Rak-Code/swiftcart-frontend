@@ -6,6 +6,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { CartProvider } from "./contexts/CartContext";
 import { AuthProvider } from "./contexts/AuthContext";
 import { ChatBot } from "./components/ChatBot";
+import { PromoBanner } from "./components/PromoBanner";
 import Index from "./pages/Index";
 import Products from "./pages/Products";
 import ProductDetail from "./pages/ProductDetail";
@@ -73,6 +74,7 @@ const App = () => (
               <Route path="*" element={<NotFound />} />
             </Routes>
             <ChatBot />
+            <PromoBanner />
           </BrowserRouter>
         </TooltipProvider>
       </CartProvider>

@@ -12,6 +12,8 @@ import { useCart } from '@/contexts/CartContext';
 import { addressApi, checkoutApi, paymentApi } from '@/lib/api';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
+import CouponInput, { AppliedCoupon } from '@/components/CouponInput';
+import { calculateDiscount } from '@/lib/discountCalculator';
 
 interface Address {
   id?: string;
@@ -51,9 +53,15 @@ const Checkout = () => {
     isDefault: false,
   });
 
+  // Coupon state
+  const [appliedCoupon, setAppliedCoupon] = useState<AppliedCoupon | null>(null);
+
   const subtotal = getCartTotal();
   const shipping = 0; // Set to 0 for testing. Update this value later when needed (e.g., 99)
-  const total = subtotal + shipping;
+  
+  // Calculate discount and total
+  const discountAmount = appliedCoupon ? appliedCoupon.discountAmount : 0;
+  const total = subtotal + shipping - discountAmount;
 
   useEffect(() => {
     // Check authentication and cart
@@ -169,6 +177,34 @@ const Checkout = () => {
     }
   };
 
+  /**
+   * Handles applying a coupon
+   * Recalculates discount based on current subtotal
+   */
+  const handleApplyCoupon = (coupon: AppliedCoupon) => {
+    // Recalculate discount with current subtotal
+    const discountResult = calculateDiscount(subtotal, coupon.discountPercentage);
+    setAppliedCoupon({
+      ...coupon,
+      discountAmount: discountResult.discountAmount
+    });
+    toast({
+      title: 'Coupon Applied',
+      description: `${coupon.discountPercentage}% discount applied to your order`,
+    });
+  };
+
+  /**
+   * Handles removing the applied coupon
+   */
+  const handleRemoveCoupon = () => {
+    setAppliedCoupon(null);
+    toast({
+      title: 'Coupon Removed',
+      description: 'Discount has been removed from your order',
+    });
+  };
+
   const loadRazorpayScript = (): Promise<boolean> => {
     return new Promise((resolve) => {
       if (window.Razorpay) {
@@ -221,15 +257,20 @@ const Checkout = () => {
         country: selectedAddress.country,
       };
 
-      const order = await checkoutApi.createOrder(
-        {
-          userId: user.id,
-          address: orderAddress,
-          totalAmount: total,
-          items: orderItems,
-        },
-        token
-      );
+      // Include discount info in order creation
+      const orderData = {
+        userId: user.id,
+        address: orderAddress,
+        totalAmount: total,
+        items: orderItems,
+        ...(appliedCoupon && {
+          couponCode: appliedCoupon.code,
+          discountPercentage: appliedCoupon.discountPercentage,
+          discountAmount: appliedCoupon.discountAmount,
+        }),
+      };
+
+      const order = await checkoutApi.createOrder(orderData, token);
 
       // Step 2: Create Razorpay Order with the orderId
       const razorpayOrder = await paymentApi.createRazorpayOrder(
@@ -549,6 +590,25 @@ const Checkout = () => {
                       {shipping === 0 ? 'Free' : `₹${shipping}`}
                     </span>
                   </div>
+                  {appliedCoupon && (
+                    <div className="flex justify-between text-xs sm:text-sm text-green-600">
+                      <span>Discount ({appliedCoupon.discountPercentage}%)</span>
+                      <span className="font-medium">-₹{appliedCoupon.discountAmount.toLocaleString()}</span>
+                    </div>
+                  )}
+                </div>
+
+                <Separator className="my-3 sm:my-4" />
+
+                {/* Coupon Input Section */}
+                <div className="mb-3 sm:mb-4">
+                  <CouponInput
+                    onApply={handleApplyCoupon}
+                    onRemove={handleRemoveCoupon}
+                    appliedCoupon={appliedCoupon}
+                    subtotal={subtotal}
+                    isLoading={processingPayment}
+                  />
                 </div>
 
                 <Separator className="my-3 sm:my-4" />
